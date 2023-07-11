@@ -4,12 +4,12 @@ linkTitle: GitHub Actions Auto PR
 description: "How to configure GitHub Pull Requests for Flux image updates."
 weight: 50
 ---
+
 {{% alert color="warning" title="Disclaimer" %}}
-Note that this guide needs review in consideration of Flux v2, and likely needs to be refreshed.
+Note that this guide needs review in consideration of Flux v2.0.0, and likely needs to be refreshed.
 
 Expect this doc to either be archived soon, or to receive some overhaul.
 {{% /alert %}}
-
 
 This guide shows how to configure GitHub Actions to open a pull request whenever a selected branch is pushed.
 

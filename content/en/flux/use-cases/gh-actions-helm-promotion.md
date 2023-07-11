@@ -6,7 +6,7 @@ weight: 31
 ---
 
 {{% alert color="warning" title="Disclaimer" %}}
-Note that this guide needs review in consideration of Flux v2, and likely needs to be refreshed.
+Note that this guide needs review in consideration of Flux v2.0.0, and likely needs to be refreshed.
 
 Expect this doc to either be archived soon, or to receive some overhaul.
 {{% /alert %}}

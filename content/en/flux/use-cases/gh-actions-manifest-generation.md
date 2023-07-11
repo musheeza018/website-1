@@ -6,11 +6,17 @@ weight: 40
 ---
 
 {{% alert color="warning" title="Disclaimer" %}}
-Note that this guide no longer is the recommended way to handle manifest generation in Flux, it was written before OCI Artifacts were available in Flux.
+This document is under review and may be declared out of scope for Flux.
 
-If you want to use Flux with tooling-generated manifests today, you should capture the output and store it in an OCI Artifact with `flux push artifact`. The following doc uses an old method that has many disadvantages: can't be secured with Cosign, can't be indexed as efficiently as an OCI registry's tag-based distribution, nor can the delivery of a private Git repository typically be authenticated and authorized in a workload cluster with any cloud-based IAM or secure ambient environmental credentials that are used to access a private OCI registry.
+Note that this guide no longer describes the recommended way to handle manifest generation in Flux. It also predates the introduction of `OCIRepository` and needs updates in consideration of those advancements.
 
 Expect this doc to either be archived soon, or to receive a major overhaul in support of the new preferred approach described above.
+{{% /alert %}}
+
+{{% alert color="info" title="Author's Note" %}}
+If you want to use Flux with tooling-generated manifests today, you should capture the output and store it in an OCI Artifact with `flux push artifact`. The following doc uses an old method that has many disadvantages: it can't be provenance secured with Cosign. The artifacts can't be indexed as efficiently as an OCI registry's tag-based distribution. Nor can the delivery of a private Git repository typically be authenticated and authorized in a workload cluster, using any cloud-based IAM or secure ambient environmental credentials that are typically used to access a private OCI registry.
+
+These methods were developed to bridge the gap for Flux users transitioning from Flux v1. The introduction of the `OCIRepository` since then, has nigh obsoleted the approach shown here. Please follow the OCI Cheatsheet guide to understand what is possible, and migrate your workflows to use Flux OCI!
 {{% /alert %}}
 
 This example implements "build-time" manifest generation on GitHub Actions.

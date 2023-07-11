@@ -6,7 +6,9 @@ weight: 39
 ---
 
 {{% alert color="warning" title="Disclaimer" %}}
-Note that this guide needs review in consideration of Flux v2, and likely needs to be refreshed.
+This document is under review and may be declared out of scope for Flux.
+
+Note that this guide needs further review in consideration of Flux v2.0.0. It also predates the introduction of `OCIRepository` and likely needs updates in consideration of those advancements.
 
 Expect this doc to either be archived soon, or to receive some overhaul.
 {{% /alert %}}
@@ -124,7 +126,7 @@ An individual image tag name (string) has two parts, `IMAGE` which represents th
 
 Image tags can be mutable or immutable. Flux works best with immutable tags: `latest` and `canary` are examples of mutable tags.
 
-This example produces both mutable and immutable tags because Flux works with immutable tags, but many users still expect a `latest` tag even if Flux won't use it. Mutable tags are useful for example with environment branches, to stably represent the latest build in a named environment, but they are contrary to GitOps, and Flux automation demands a timestamp or something sortable in the tag string. Thus mutable tags alone are not suitable for any Flux purpose.
+This example produces both mutable and immutable tags because Flux works with immutable tags, but many users still expect a `latest` tag even if Flux won't be able to take advantage of it. Mutable tags are useful for example with environment branches, to stably represent the latest build in a named environment, but their use is generally contrary to GitOps principles. Flux automation demands immutable tags, with a timestamp or something else sortable in the tag string. Thus mutable tags alone are not suitable for most purposes in Flux.
 
 In this example, `LATEST_ID` represents a mutable tag and `latest` as a tag represents the last release build that was pushed from any Git tag. The `canary` tag is the last image that was pushed from any branch.
 
