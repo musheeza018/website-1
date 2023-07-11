@@ -5,6 +5,12 @@ description: "How to build and push image tags for Flux from Git branches and ta
 weight: 39
 ---
 
+{{% alert color="warning" title="Disclaimer" %}}
+Note that this guide needs review in consideration of Flux v2, and likely needs to be refreshed.
+
+Expect this doc to either be archived soon, or to receive some overhaul.
+{{% /alert %}}
+
 This guide shows how to configure GitHub Actions to build an image for each new commit pushed on a branch, for PRs, or for tags in the most basic way that Flux's automation can work with and making some considerations for both dev and production.
 
 A single GitHub Actions workflow is presented with a few variations but one simple theme: Flux's only firm requirement for integrating with CI is for the CI to build and push an image. So this document shows how to do just that.

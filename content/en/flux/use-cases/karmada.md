@@ -9,6 +9,12 @@ weight: 20
 Note that this guide is not for doing GitOps, but for managing Helm releases for applications among multiple clusters.
 {{% /alert %}}
 
+{{% alert color="warning" title="Disclaimer" %}}
+Note that this guide needs review in consideration of Flux v2, and likely needs to be refreshed.
+
+Expect this doc to either be archived soon, or to receive some overhaul.
+{{% /alert %}}
+
 ## Background
 
 [Karmada](https://github.com/karmada-io/karmada) is a Kubernetes management system that enables you to run your cloud-native applications across multiple Kubernetes clusters and clouds, with no changes to your applications. 

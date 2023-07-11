@@ -5,6 +5,12 @@ description: "How to configure a promotion workflow for Flux HelmReleases with G
 weight: 31
 ---
 
+{{% alert color="warning" title="Disclaimer" %}}
+Note that this guide needs review in consideration of Flux v2, and likely needs to be refreshed.
+
+Expect this doc to either be archived soon, or to receive some overhaul.
+{{% /alert %}}
+
 This guide shows how to configure Flux and GitHub Actions to promote
 Helm Releases across environments when a new Helm chart version is available.
 
