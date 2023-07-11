@@ -10,7 +10,7 @@ This document is under review and may be declared out of scope for Flux.
 
 Note that this guide no longer describes the recommended way to handle manifest generation in Flux. It also predates the introduction of `OCIRepository` and needs updates in consideration of those advancements.
 
-Expect this doc to either be archived soon, or to receive a major overhaul in support of the new preferred approach described above.
+Expect this doc to either be archived soon, or to receive a major overhaul in support of the new preferred approach described below.
 {{% /alert %}}
 
 {{% alert color="info" title="Author's Note" %}}
