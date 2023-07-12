@@ -2,7 +2,7 @@
 title: "Flux releases"
 linkTitle: "Releases"
 description: "Flux release documentation."
-weight: 141
+weight: 120
 ---
 
 The Flux project repository [fluxcd/flux2](https://github.com/fluxcd/flux2) contains
