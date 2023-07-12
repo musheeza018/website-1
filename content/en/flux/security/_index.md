@@ -2,7 +2,7 @@
 title: "Security Documentation"
 linkTitle: "Security"
 description: "Flux Security documentation."
-weight: 140
+weight: 110
 ---
 
 <!-- For doc writers: Step-by-step security instructions should live on the appropriate documentation pages.
