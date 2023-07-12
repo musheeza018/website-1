@@ -1,7 +1,7 @@
 ---
 title: 'Flux CLI'
 description: "The Flux Command-Line Interface documentation."
-weight: 80
+weight: 90
 cascade:
   importedDoc: true
 ---
