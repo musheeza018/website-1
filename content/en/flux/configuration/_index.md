@@ -1,7 +1,7 @@
 ---
-title: "Flux releases"
-linkTitle: "Releases"
-description: "Flux release documentation."
+title: "Configuration"
+linkTitle: "Configuration"
+description: "Flux configuration documentation."
 weight: 40
 ---
 Mus
