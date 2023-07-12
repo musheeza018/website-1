@@ -2,7 +2,7 @@
 title: "GitOps Toolkit components"
 linkTitle: "Toolkit Components"
 description: "Documentation of the individual GitOps Toolkit components and their APIs."
-weight: 60
+weight: 70
 ---
 
 Flux is constructed with the GitOps Toolkit components, which is a set of
