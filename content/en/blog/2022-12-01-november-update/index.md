@@ -77,7 +77,7 @@ Here is our shortlist of features and improvements in the release:
 
 Check out these new pieces of documentation:
 
-- Guide: [AWS CodeCommit bootstrap](/flux/use-cases/aws-codecommit/)
+- Guide: [AWS CodeCommit bootstrap](/flux/installation/bootstrap/aws-code-commit/)
 - Guide: [Azure DevOps
   bootstrap](/flux/use-cases/azure/#flux-installation-for-azure-devops)
 
@@ -357,7 +357,7 @@ couple of small things we landed recently:
   the landing page
 - Show adopters logos in horizontal scroll band
 - Updated [Flagger docs](/flagger/) to 1.25.0
-- Updated [AWS CodeCommit docs](/flux/use-cases/aws-codecommit/)
+- Updated [AWS CodeCommit docs](/flux/installation/bootstrap/aws-code-commit/)
 - Updated [Azure docs](/flux/use-cases/azure/)
 - Added [GitOpsCon talk videos](/resources/)
 - Many other improvements and fixes
