@@ -112,10 +112,10 @@ If your Git provider is **AWS CodeCommit**, **Azure DevOps**, **Bitbucket Server
 follow the specific bootstrap procedure:
 
 * [AWS CodeCommit](./bootstrap/aws-code-commit.md#flux-installation-for-aws-codecommit)
-* [Azure DevOps](./use-cases/azure.md#flux-installation-for-azure-devops)
-* [Bitbucket Server and Data Center](#bitbucket-server-and-data-center)
-* [GitHub.com and GitHub Enterprise](#github-and-github-enterprise)
-* [GitLab.com and GitLab Enterprise](#gitlab-and-gitlab-enterprise)
+* [Azure DevOps](./bootstrap/azure.md#flux-installation-for-azure-devops)
+* [Bitbucket Server and Data Center](./bootstrap/bitbucket.md#bitbucket-server-and-data-center)
+* [GitHub.com and GitHub Enterprise](./bootstrap/github.md#github-and-github-enterprise)
+* [GitLab.com and GitLab Enterprise](./bootstrap/gitlab.md#gitlab-and-gitlab-enterprise)
 
 ### Air-gapped Environments
 
