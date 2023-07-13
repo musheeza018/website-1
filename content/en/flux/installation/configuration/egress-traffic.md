@@ -5,5 +5,5 @@ description: "Using HTTP/S proxy for egress traffic"
 weight: 130
 card:
   name: configuration
-  weight: 10
+  weight: 20
 ---
