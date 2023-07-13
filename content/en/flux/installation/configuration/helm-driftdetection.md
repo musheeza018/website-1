@@ -15,7 +15,7 @@ cluster-state. To enable experimental drift detection, you must add the
 Enabling it will cause the controller to check for drift on all Helm releases
 using a dry-run Server Side Apply, triggering an upgrade if a change is detected.
 For detailed information about this feature, [refer to the
-documentation](/flux/components/helm/helmreleases/#drift-detection).
+documentation](/flux/components/helm/).
 
 ```yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
