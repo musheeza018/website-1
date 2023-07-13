@@ -1,6 +1,6 @@
 ---
-title: Enable Helm near OOM detection
-linkTitle: Enable Helm near OOM detection
-description: "Enable Helm near OOM detection"
+title: Enable Helm OOM detection
+linkTitle: Enable Helm OOM detection
+description: "Enable Helm OOM detection"
 weight: 110
 ---
