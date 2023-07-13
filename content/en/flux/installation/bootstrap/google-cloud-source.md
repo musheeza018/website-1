@@ -25,7 +25,7 @@ Like the cluster, it can be created with the CLI or the console.
 
 ### Flux Installation
 
-Download the [Flux CLI](../#install-the-flux-cli) and bootstrap Flux with:
+Download the [Flux CLI](/flux/installation#install-the-flux-cli) and bootstrap Flux with:
 
 ```sh
 flux bootstrap git \
@@ -45,7 +45,7 @@ by adding the `--private-key-file` and `--password` flags.
 ### Flux Upgrade
 
 To upgrade Flux, first you need to download the new CLI binary
-from [GitHub release](../#install-the-flux-cli).
+from [GitHub release](/flux/installation#install-the-flux-cli).
 
 Flux components can be upgraded by running the `bootstrap` command again with the same arguments as before:
 
