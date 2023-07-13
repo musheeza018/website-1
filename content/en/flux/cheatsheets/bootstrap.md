@@ -5,7 +5,7 @@ description: "Showcase various configurations of Flux controllers at bootstrap t
 weight: 29
 ---
 
-## How to customize Flux
+## This is customization of Flux
 
 To customize the Flux controllers during bootstrap,
 first you'll need to create a Git repository and clone it locally.
@@ -16,6 +16,11 @@ Create the file structure required by bootstrap with:
 mkdir -p clusters/my-cluster/flux-system
 touch clusters/my-cluster/flux-system/gotk-components.yaml \
     clusters/my-cluster/flux-system/gotk-sync.yaml \
+    clusters/my-cluster/flux-system/kustomization.yaml
+```
+
+```sh
+    musheeza 
     clusters/my-cluster/flux-system/kustomization.yaml
 ```
 
@@ -101,14 +106,31 @@ patches:
       labelSelector: app.kubernetes.io/part-of=flux
 ```
 
-### Allow Helm DNS lookups
 
-By default, the helm-controller will not perform DNS lookups when rendering Helm
-templates in clusters because of potential [security
-implications](https://github.com/helm/helm/security/advisories/GHSA-pwcw-6f5g-gxf8).
+### OpenShift compatibility
 
-To enable DNS lookups, you must add the `--feature-gates=AllowDNSLookups=true`
-flag to the helm-controller Deployment.
+Allow Flux controllers to run as non-root:
+
+```shell
+#!/usr/bin/env bash
+set -e
+
+FLUX_NAMESPACE="flux-system"
+FLUX_CONTROLLERS=(
+"source-controller"
+"kustomize-controller"
+"helm-controller"
+"notification-controller"
+"image-reflector-controller"
+"image-automation-controller"
+)
+
+for i in ${!FLUX_CONTROLLERS[@]}; do
+  oc adm policy add-scc-to-user nonroot system:serviceaccount:${FLUX_NAMESPACE}:${FLUX_CONTROLLERS[$i]}
+done
+```
+
+Set the user to nobody and delete the seccomp profile from the security context:
 
 ```yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
@@ -118,17 +140,123 @@ resources:
   - gotk-sync.yaml
 patches:
   - patch: |
-      # Allow Helm DNS lookups
-      - op: add
-        path: /spec/template/spec/containers/0/args/-
-        value: --feature-gates=AllowDNSLookups=true
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: all
+      spec:
+        template:
+          spec:
+            containers:
+              - name: manager
+                securityContext:
+                  runAsUser: 65534
+                  seccompProfile:
+                    $patch: delete
     target:
       kind: Deployment
-      name: helm-controller
+      labelSelector: app.kubernetes.io/part-of=flux
 ```
 
+### IAM Roles for Service Accounts
 
+To allow Flux access to an AWS service such as KMS or S3, after setting up IRSA,
+you can annotate the controller service account with the role ARN:
 
+```yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - gotk-components.yaml
+  - gotk-sync.yaml
+patches:
+  - patch: |
+      apiVersion: v1
+      kind: ServiceAccount
+      metadata:
+        name: kustomize-controller
+        annotations:
+          eks.amazonaws.com/role-arn: arn:aws:iam::<ACCOUNT_ID>:role/<KMS-ROLE-NAME>
+    target:
+      kind: ServiceAccount
+      name: kustomize-controller
+  - patch: |
+      apiVersion: v1
+      kind: ServiceAccount
+      metadata:
+        name: source-controller
+        annotations:
+          eks.amazonaws.com/role-arn: arn:aws:iam::<ACCOUNT_ID>:role/<S3-ROLE-NAME>
+    target:
+      kind: ServiceAccount
+      name: source-controller
+```
+
+### Multi-tenancy lockdown
+
+Lock down Flux on a multi-tenant cluster by disabling cross-namespace references and Kustomize remote bases, and
+by setting a default service account:
+
+```yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - gotk-components.yaml
+  - gotk-sync.yaml
+patches:
+  - patch: |
+      - op: add
+        path: /spec/template/spec/containers/0/args/-
+        value: --no-cross-namespace-refs=true
+    target:
+      kind: Deployment
+      name: "(kustomize-controller|helm-controller|notification-controller|image-reflector-controller|image-automation-controller)"
+  - patch: |
+      - op: add
+        path: /spec/template/spec/containers/0/args/-
+        value: --no-remote-bases=true
+    target:
+      kind: Deployment
+      name: "kustomize-controller"
+  - patch: |
+      - op: add
+        path: /spec/template/spec/containers/0/args/-
+        value: --default-service-account=default
+    target:
+      kind: Deployment
+      name: "(kustomize-controller|helm-controller)"
+  - patch: |
+      - op: add
+        path: /spec/serviceAccountName
+        value: kustomize-controller
+    target:
+      kind: Kustomization
+      name: "flux-system"
+```
+
+### Disable Kubernetes cluster role aggregations
+
+By default, Flux [RBAC](/flux/security/#controller-permissions) grants Kubernetes builtin `view`, `edit` and `admin` roles
+access to Flux custom resources. To disable the RBAC aggregation, you can remove the `flux-view` and `flux-edit`
+cluster roles with:
+
+```yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - gotk-components.yaml
+  - gotk-sync.yaml
+patches:
+  - patch: |
+      apiVersion: rbac.authorization.k8s.io/v1
+      kind: ClusterRole
+      metadata:
+        name: flux
+      $patch: delete
+    target:
+      kind: ClusterRole
+      name: "(flux-view|flux-edit)-flux-system"
+```
 
 ### Enable notifications for third party controllers
 
