@@ -1,6 +1,6 @@
 ---
 title: "Bootstrap"
-linkTitle: "Botstrap"
+linkTitle: "Bootstrap"
 description: ""
 weight: 20
 ---
