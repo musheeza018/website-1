@@ -1,7 +1,7 @@
 ---
-title: Upgrade
-linkTitle: Upgrade (CLI bootstrap, GH Action, Renovate, terraform, in-cluster)
-description: "Upgrade (CLI bootstrap, GH Action, Renovate, terraform, in-cluster)"
+title: Uninstal
+linkTitle: Uninstall (CLI uninstall)
+description: "Uninstall (CLI uninstall)"
 weight: 50
 ---
 
