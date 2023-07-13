@@ -25,7 +25,7 @@ Like the cluster, it can be created with the CLI or the console.
 
 ### Flux Installation
 
-Download the [Flux CLI](../installation.md#install-the-flux-cli) and bootstrap Flux with:
+Download the [Flux CLI](../../installation#install-the-flux-cli) and bootstrap Flux with:
 
 ```sh
 flux bootstrap git \
@@ -45,7 +45,7 @@ by adding the `--private-key-file` and `--password` flags.
 ### Flux Upgrade
 
 To upgrade Flux, first you need to download the new CLI binary
-from [GitHub release](../installation.md#install-the-flux-cli).
+from [GitHub release](../../installation#install-the-flux-cli).
 
 Flux components can be upgraded by running the `bootstrap` command again with the same arguments as before:
 
@@ -86,7 +86,7 @@ Patch the kustomize-controller with the
 annotation so that it can access GCP KMS.
 You can start committing your encrypted files to Git with the proper GCP KMS configuration.
 
-See the [Mozilla SOPS AWS Guide](../guides/mozilla-sops.md#google-cloud) for further detail.
+See the [Mozilla SOPS AWS Guide](../../guides/mozilla-sops#google-cloud) for further detail.
 
 ### Image Updates with Google Container Registry
 
@@ -105,6 +105,6 @@ flux bootstrap git \
 --components-extra="image-reflector-controller,image-automation-controller"
 ```
 
-Follow the [Image Update Automation Guide](../guides/image-update.md) and see the
-[GCP specific Image Automation Contollers documentation](../components/image/imagerepositories/#gcp)
+Follow the [Image Update Automation Guide](../../guides/image-update) and see the
+[GCP specific Image Automation Contollers documentation](../../components/image/imagerepositories/#gcp)
 for more details on how to configure image update automation for GKE.
