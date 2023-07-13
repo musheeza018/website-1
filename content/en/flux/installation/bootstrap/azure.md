@@ -86,7 +86,7 @@ See `az configure --help`, `az configure --list-defaults`, and `az configure --d
 
 ## Flux Installation for Azure DevOps
 
-You can install Flux using a Azure Devops repository using the [`flux bootsrap git`](../../installation#bootstrap)
+You can install Flux using a Azure Devops repository using the [`flux bootstrap git`](../../installation#bootstrap)
 command.
 Ensure you can login to [dev.azure.com](https://dev.azure.com) for your proper organization,
 and create a new repository to hold your Flux install and other Kubernetes resources.
@@ -213,7 +213,7 @@ flux install \
   --components-extra="image-reflector-controller,image-automation-controller" \
   --export > ./clusters/my-cluster/flux-system/gotk-components.yaml
 ```
-
+ 
 Follow the [Image Update Automation Guide](../..//guides/image-update) and see the
 [ACR specific section](../../guides/image-update#azure-container-registry) for more details.
 
