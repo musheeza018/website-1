@@ -7,7 +7,7 @@ weight: 170
 
 ### Disable Kubernetes cluster role aggregations
 
-By default, Flux [RBAC](/flux/security/#controller-permissions) grants Kubernetes builtin `view`, `edit` and `admin` roles
+By default, Flux [RBAC](../../security/#controller-permissions) grants Kubernetes builtin `view`, `edit` and `admin` roles
 access to Flux custom resources. To disable the RBAC aggregation, you can remove the `flux-view` and `flux-edit`
 cluster roles with:
 
