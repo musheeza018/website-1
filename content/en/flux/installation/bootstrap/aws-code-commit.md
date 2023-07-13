@@ -25,7 +25,7 @@ For more details on how to create an EKS cluster with `eksctl` please see [eksct
 
 ## Flux Installation for AWS CodeCommit
 
-You can install Flux using a AWS CodeCommit repository using the [`flux bootstrap git`](../installation.md#bootstrap)
+You can install Flux using a AWS CodeCommit repository using the [`flux bootstrap git`](../../installation#bootstrap)
 command.
 Ensure you can login to console.aws.amazon.com for your proper organization, and create a new repository to hold your Flux
 install and other Kubernetes resources.
