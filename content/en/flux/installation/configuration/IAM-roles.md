@@ -5,7 +5,6 @@ description: "IAM Roles for Service Accounts"
 weight: 160
 ---
 
-
 ### IAM Roles for Service Accounts
 
 To allow Flux access to an AWS service such as KMS or S3, after setting up IRSA,
