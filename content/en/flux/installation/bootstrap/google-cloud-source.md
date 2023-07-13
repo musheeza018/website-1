@@ -45,7 +45,7 @@ by adding the `--private-key-file` and `--password` flags.
 ### Flux Upgrade
 
 To upgrade Flux, first you need to download the new CLI binary
-from [GitHub release](../../installation#install-the-flux-cli).
+from [GitHub release](../installation#install-the-flux-cli).
 
 Flux components can be upgraded by running the `bootstrap` command again with the same arguments as before:
 
