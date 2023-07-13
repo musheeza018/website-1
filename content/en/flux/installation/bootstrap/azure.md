@@ -86,7 +86,7 @@ See `az configure --help`, `az configure --list-defaults`, and `az configure --d
 
 ## Flux Installation for Azure DevOps
 
-You can install Flux using a Azure Devops repository using the [`flux bootsrap git`](../installation.md#bootstrap)
+You can install Flux using a Azure Devops repository using the [`flux bootsrap git`](../../installation#bootstrap)
 command.
 Ensure you can login to [dev.azure.com](https://dev.azure.com) for your proper organization,
 and create a new repository to hold your Flux install and other Kubernetes resources.
@@ -199,7 +199,7 @@ If you want to use Managed Identities, install or enable [AAD Pod Identity](#aad
 Patch kustomize-controller with the proper Azure credentials, so that it may access your Azure Key Vault, and then begin
 committing SOPS encrypted files to the Git repository with the proper Azure Key Vault configuration.
 
-See the [Mozilla SOPS Azure Guide](../guides/mozilla-sops.md#azure) for further detail.
+See the [Mozilla SOPS Azure Guide](../,,/guides/mozilla-sops#azure) for further detail.
 
 ## Image Updates with Azure Container Registry
 
@@ -214,8 +214,8 @@ flux install \
   --export > ./clusters/my-cluster/flux-system/gotk-components.yaml
 ```
 
-Follow the [Image Update Automation Guide](../guides/image-update.md) and see the
-[ACR specific section](../guides/image-update.md#azure-container-registry) for more details.
+Follow the [Image Update Automation Guide](../..//guides/image-update) and see the
+[ACR specific section](../../guides/image-update#azure-container-registry) for more details.
 
 Your AKS cluster's configuration can also be updated to
 [allow the kubelets to pull images from ACR](https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration)
