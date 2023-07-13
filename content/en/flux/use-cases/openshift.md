@@ -167,7 +167,7 @@ flux bootstrap github \
   --personal
 ```
 
-Please see also the [upgrade](../installation/_index.md#upgrade)
+Please see also the [upgrade](../installation/upgrade)
 and the [bootstrap upgrade](../installation/_index.md#bootstrap-upgrade) documentations for details.
 
 ## Flux Installation via OperatorHub
