@@ -5,6 +5,7 @@ description: "Enable Helm drift detection"
 weight: 100
 ---
 
+
 ### Enable Helm drift detection
 
 At present, Helm releases are not by default checked for drift compared to
@@ -36,3 +37,4 @@ patches:
       kind: Deployment
       name: helm-controller
 ```
+
