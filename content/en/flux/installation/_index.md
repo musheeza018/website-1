@@ -203,7 +203,7 @@ To make further amendments, pull the changes locally,
 edit the `kustomization.yaml` file, push the changes upstream
 and rerun bootstrap or let Flux upgrade itself.
 
-Checkout the [bootstrap cheatsheet](cheatsheets/bootstrap.md) for various examples of how to customize Flux.
+Checkout the [bootstrap cheatsheet](cheatsheets/bootstrap) for various examples of how to customize Flux.
 
 ### Multi-tenancy lockdown
 
