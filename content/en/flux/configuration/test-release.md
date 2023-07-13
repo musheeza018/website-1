@@ -1,6 +1,6 @@
 ---
 title: Test release candidate
-linkTitle:v 
+linkTitle: Test release candidate
 description: "Test release candidate"
 weight: 190
 ---
