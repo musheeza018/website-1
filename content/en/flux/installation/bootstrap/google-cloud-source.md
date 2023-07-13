@@ -5,7 +5,6 @@ description: "Google Cloud Source"
 weight: 70
 ---
 
-
 ### Cluster Creation
 
 To create a cluster with Google Cloud you can use the `gcloud` cli or the Google Cloud Console.
@@ -26,7 +25,7 @@ Like the cluster, it can be created with the CLI or the console.
 
 ### Flux Installation
 
-Download the [Flux CLI](../../installation#install-the-flux-cli) and bootstrap Flux with:
+Download the [Flux CLI](../installation#install-the-flux-cli) and bootstrap Flux with:
 
 ```sh
 flux bootstrap git \
