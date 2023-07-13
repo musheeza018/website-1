@@ -23,7 +23,7 @@ flux --version
 
 ### Bootstrap upgrade
 
-If you've used the [bootstrap](#bootstrap) procedure to deploy Flux,
+If you've used the [bootstrap](/flux/installation#bootstrap) procedure to deploy Flux,
 then rerun the bootstrap command for each cluster using the same arguments as before:
 
 ```sh
