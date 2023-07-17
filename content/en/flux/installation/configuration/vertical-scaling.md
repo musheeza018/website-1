@@ -1,7 +1,7 @@
 ---
 title: Controller vertical scaling (renamed from Increase the number of workers)
 linkTitle: Controller vertical scaling (renamed from Increase the number of workers)
-description: "Controller vertical scaling (renamed from Increase the number of workers)"
+description: "How to configure controller vertical scaling (renamed from Increase the number of workers) in Flux"
 weight: 60
 ---
 
