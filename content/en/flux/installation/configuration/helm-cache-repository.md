@@ -1,7 +1,7 @@
 ---
 title: Enable Helm repositories caching 
 linkTitle: Enable Helm repositories caching
-description: "Enable Helm repositories caching"
+description: "How to enable Helm repositories caching in Flux"
 weight: 90
 ---
 
