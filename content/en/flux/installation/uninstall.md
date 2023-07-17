@@ -1,7 +1,7 @@
 ---
 title: Uninstal
 linkTitle: Uninstall (CLI uninstall)
-description: "Uninstall (CLI uninstall)"
+description: "Uninstall Flux using CLI uninstall method"
 weight: 50
 ---
 
