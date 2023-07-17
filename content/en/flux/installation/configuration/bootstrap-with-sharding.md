@@ -5,8 +5,6 @@ description: "How to configure controller sharding and horizontal scaling in Flu
 weight: 50
 ---
 
-
-
 When Flux is managing tens of thousands of applications, it is advised to adopt
 a sharding strategy to spread the load between multiple instances of Flux controllers.
 To enable horizontal scaling, each controller can be deployed multiple times
