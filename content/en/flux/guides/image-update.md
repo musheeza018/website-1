@@ -9,7 +9,7 @@ card:
 ---
 
 This guide walks you through configuring container image scanning and deployment rollouts with Flux.
-
+ 
 For a container image you can configure Flux to:
 
 - scan the container registry and fetch the image tags
