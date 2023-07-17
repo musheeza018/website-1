@@ -1,7 +1,7 @@
 ---
 title: OpenShift compatibility
 linkTitle: OpenShift compatibility
-description: "OpenShift compatibility"
+description: "How to configure OpenShift compatibility in Flux"
 weight: 150
 ---
 
