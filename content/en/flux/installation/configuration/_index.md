@@ -1,6 +1,6 @@
 ---
 title: Configuration
 linkTitle: Configuration
-description: "Configuration"
+description: "How to configure Flux"
 weight: 30
 ---
