@@ -1,7 +1,7 @@
 ---
 title: Enable Helm near OOM detection
 linkTitle: Enable Helm near OOM detection
-description: "Enable Helm near OOM detection"
+description: "How to enable Helm near OOM detection in Flux"
 weight: 111
 card:
   name: configuration
