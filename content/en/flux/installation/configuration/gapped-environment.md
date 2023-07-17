@@ -1,7 +1,7 @@
 ---
 title: Air Gapped Environment
 linkTitle: Air Gapped Environment
-description: "Air Gapped Environment"
+description: "How to configure Air Gapped Environment in Flux"
 weight: 20
 ---
 
