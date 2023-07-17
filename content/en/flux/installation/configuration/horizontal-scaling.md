@@ -1,7 +1,7 @@
 ---
 title: Controller sharding and horizontal scaling
 linkTitle: Controller sharding and horizontal scaling
-description: "Controller sharding and horizontal scaling"
+description: "How to configure controller sharding and horizontal scaling in Flux"
 weight: 50
 ---
 
