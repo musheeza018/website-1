@@ -1,7 +1,7 @@
 ---
 title: Enable notifications for third party controllers
 linkTitle: Enable notifications for third party controllers
-description: "Enable notifications for third party controllers"
+description: "How to enable notifications for third party controllers in Flux"
 weight: 180
 ---
 
