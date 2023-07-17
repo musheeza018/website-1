@@ -1,7 +1,7 @@
 ---
 title: Persistent storage for internal artifacts
 linkTitle: Persistent storage for internal artifacts
-description: "Persistent storage for internal artifacts"
+description: "How to configure persistent storage for internal artifacts in Flux"
 weight: 80
 ---
 
