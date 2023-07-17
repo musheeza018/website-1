@@ -5,7 +5,6 @@
 /docs/components/notification/controller        /flux/components/notification                       301!
 /docs/components/source/controller              /flux/components/source                             301!
 /docs/guides/installation                       /flux/installation                                  301!
-/docs/installation/bootstrap                    /flux/installation/bootstrap                        301!
 /docs/installation/configurations               /flux/installation/configurations                   301!
 /docs/installation/upgrade                      /flux/installation/upgrade                          301!
 /docs/installation/uninstall                    /flux/installation/uninstall                        301!
@@ -30,6 +29,36 @@
 /flagger/usage/osm-progressive-delivery         /flagger/tutorials/osm-progressive-delivery         301!
 /flagger/usage/kuma-progressive-delivery        /flagger/tutorials/kuma-progressive-delivery        301!
 /flagger/usage/gatewayapi-progressive-delivery  /flagger/tutorials/gatewayapi-progressive-delivery  301!
+
+/flux/installation/#bootstrap                                         /flux/installation/bootstrap                             301!
+/flux/installation/#bitbucket-server-and-data-center                  /flux/installation/bootstrap/bitbucket                   301!
+/flux/installation/#generic-git-server                                /flux/installation/bootstrap/generic-git-server          301!
+/flux/installation/#github-and-github-enterprise                      /flux/installation/bootstrap/github                      301!
+/flux/installation/#gitlab-and-gitlab-enterprise                      /flux/installation/bootstrap/gitlab                      301!
+/flux/installation/#upgrade                                           /flux/installation/upgrade                               301!
+/flux/installation/#uninstall                                         /flux/installation/uninstall                             301!
+/flux/use-cases/aws-codecommit/*                                      /flux/installation/bootstrap/aws-code-commit             301!
+/flux/use-cases/azure/*                                               /flux/installation/bootstrap/azure                       301!
+/flux/use-cases/gcp-source-repository                                 /flux/installation/bootstrap/gcp-source-repository       301! 
+
+/flux/cheatsheets/bootstrap/#iam-roles-for-service-accounts                   /flux/installation/configuration/iam-roles-for-service-accounts                      301!
+/flux/installation/#air-gapped-environments                                   /flux/installation/configuration/air-gapped-environment                              301!
+/flux/cheatsheets/bootstrap/#enable-helm-repositories-caching                 /flux/installation/configuration/enable-helm-repositories                            301!
+/flux/cheatsheets/bootstrap/#git-repository-access-via-socks5-ssh-proxy       /flux/installation/configuration/git-repository-access-via-socks5-ssh-proxy          301!
+/flux/cheatsheets/bootstrap/#allow-helm-dns-lookups                           /flux/installation/configuration/allow-helm-dns-lookups                              301!
+/flux/cheatsheets/bootstrap/#enable-helm-drift-detection                      /flux/installation/configuration/enable-helm-drift-detection                         301!
+/flux/cheatsheets/sharding/#bootstrap-with-sharding                           /flux/installation/configuration/bootstrap-with-sharding                             301!
+/flux/cheatsheets/bootstrap/#persistent-storage-for-flux-internal-artifacts   /flux/installation/configuration/persistent-storage-for-flux-internal-artifacts      301!
+/flux/cheatsheets/bootstrap/#disable-kubernetes-cluster-role-aggregations     /flux/installation/configuration/disable-kubernetes-cluster-role-aggregations        301! 
+/flux/cheatsheets/bootstrap/#multi-tenancy-lockdown                           /flux/installation/configuration/multi-tenancy-lockdown                              301! 
+/flux/cheatsheets/bootstrap/#node-affinity-and-tolerations                    /flux/installation/configuration/node-affinity-and-tolerations                       301! 
+/flux/cheatsheets/bootstrap/#enable-helm-near-oom-detection                   /flux/installtion/configuration/enable-helm-near-oom-detection                       301!
+/flux/cheatsheets/bootstrap/#openshift-compatibility                          /flux/installation/configuration/openshift-compatability                             301!
+/flux/cheatsheets/bootstrap/#using-https-proxy-for-egress-traffic             /flux/installation/configuration/using-https-proxy-for-egress-traffic                301!
+/flux/installation/#deploy-key-rotation                                       /flux/installation/configuration/deploy-key-rotation                                 301!
+/flux/cheatsheets/bootstrap/#test-release-candidates                          /flux/installation/configuration/test-release-candidates                             301!
+/flux/cheatsheets/bootstrap/#enable-notifications-for-third-party-controllers /flux/installation/configuration/enable-notifications-for-third-party-controllers    301!
+/flux/cheatsheets/bootstrap/#increase-the-number-of-workers                   /flux/installation/configuration/controller-vertical-scaling                         301!  
 
 /docs/contributing/*                            /contributing/:splat                                301!
 /docs/*                                         /flux/:splat                                        301!
