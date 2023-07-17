@@ -1,7 +1,7 @@
 ---
 title: Test release candidate
 linkTitle: Test release candidate
-description: "Test release candidate"
+description: "How to configure test release candidate in Flux"
 weight: 190
 ---
 
