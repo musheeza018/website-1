@@ -1,7 +1,7 @@
 ---
 title: Allow Helm DNS lookups 
 linkTitle: Allow Helm DNS lookups
-description: "Allow Helm DNS lookups"
+description: "How to configure Helm DNS lookups in Flux"
 weight: 120
 card:
   name: configuration
