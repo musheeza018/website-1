@@ -41,7 +41,7 @@
 /flux/use-cases/azure/*                                               /flux/installation/bootstrap/azure                       301!
 /flux/use-cases/gcp-source-repository                                 /flux/installation/bootstrap/gcp-source-repository       301! 
 
-/flux/cheatsheets/bootstrap/#iam-roles-for-service-accounts                   /flux/installation/configuration/iam-roles-for-service-accounts                      301!
+/flux/cheatsheets/bootstrap/#iam-roles-for-service-accounts                   /flux/installation/configuration/iam-roles-for-service-accounts/*                    301!
 /flux/installation/#air-gapped-environments                                   /flux/installation/configuration/air-gapped-environment                              301!
 /flux/cheatsheets/bootstrap/#enable-helm-repositories-caching                 /flux/installation/configuration/enable-helm-repositories                            301!
 /flux/cheatsheets/bootstrap/#git-repository-access-via-socks5-ssh-proxy       /flux/installation/configuration/git-repository-access-via-socks5-ssh-proxy          301!
