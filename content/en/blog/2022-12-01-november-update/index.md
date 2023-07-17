@@ -77,7 +77,7 @@ Here is our shortlist of features and improvements in the release:
 
 Check out these new pieces of documentation:
 
-- Guide: [AWS CodeCommit bootstrap](/flux/installation/bootstrap/aws-code-commit/)
+- Guide: [AWS CodeCommit bootstrap](/flux/installation/bootstrap/aws-codecommit/)
 - Guide: [Azure DevOps
   bootstrap](/flux/instalation/bootstrap/azure/#flux-installation-for-azure-devops)
 
