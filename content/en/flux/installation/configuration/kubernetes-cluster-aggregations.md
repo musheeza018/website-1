@@ -1,7 +1,7 @@
 ---
 title: Disable Kubernetes cluster role aggregations
 linkTitle: Disable Kubernetes cluster role aggregations
-description: "Disable Kubernetes cluster role aggregations"
+description: "How to disable Kubernetes cluster role aggregations in Flux"
 weight: 170
 ---
 
