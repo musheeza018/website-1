@@ -1,7 +1,7 @@
 ---
 title: Azure
 linkTitle: Azure
-description: "How to follow bootstrap procedure for Flux using Azure"
+description: "How to bootstrap Flux with Azure"
 weight: 60
 ---
 
