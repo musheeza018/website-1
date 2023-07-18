@@ -4,7 +4,7 @@ description: "Flux install, bootstrap, upgrade and uninstall documentation."
 weight: 30
 ---
 
-Flux is an architectural pattern designed for building user interfaces, specifically in the context of web applications. It was initially introduced by Facebook as a means to manage state in complex and data-driven applications. Flux emphasizes a unidirectional flow of data, providing a clear structure to handle application state and data flow.
+Flux facilitates the uninterrupted deployment of both infrastructure and user-facing applications by employing version control at each stage. This approach guarantees that the deployment process remains reproducible, auditable, and reversible.
 
 Flux consists of several distinct components that work together to create a smooth and manageable data flow within an application.
 
@@ -136,7 +136,7 @@ as [multi-arch container images](https://docs.docker.com/docker-for-mac/multi-ar
 with support for Linux `amd64`, `arm64` and `armv7` (e.g. 32bit Raspberry Pi)
 architectures.
 
-If your Git provider is **AWS CodeCommit**, **Azure DevOps**, **Bitbucket Server**, **GitHub** or **GitLab** please
+If your Git provider is Generic Git Server, AWS CodeCommit, Azure DevOps, Bitbucket Server, GitHub or GitLab please
 follow the specific bootstrap procedure:
 
 * [Generic Git Server](./bootstrap/generic-git-server.md)
@@ -179,60 +179,6 @@ resource "flux_bootstrap_git" "this" {
 
 For more details on how to use the Terraform provider
 please see the [Flux docs on registry.terraform.io](https://registry.terraform.io/providers/fluxcd/flux/latest/docs).
-
-## Customize Flux manifests
-
-You can customize the Flux components before or after running bootstrap.
-
-Assuming you want to customise the Flux controllers before they get deployed on the cluster,
-first you'll need to create a Git repository and clone it locally.
-
-Create the file structure required by bootstrap with:
-
-```sh
-mkdir -p clusters/my-cluster/flux-system
-touch clusters/my-cluster/flux-system/gotk-components.yaml \
-    clusters/my-cluster/flux-system/gotk-sync.yaml \
-    clusters/my-cluster/flux-system/kustomization.yaml
-```
-
-Add patches to `kustomization.yaml`:
-
-```yaml
-apiVersion: kustomize.config.k8s.io/v1
-kind: Kustomization
-resources: # manifests generated during bootstrap
-  - gotk-components.yaml
-  - gotk-sync.yaml
-
-patches: # customize the manifests during bootstrap
-  - target:
-      kind: Deployment
-      labelSelector: app.kubernetes.io/part-of=flux
-    patch: |
-      # strategic merge or JSON patch
-```
-
-Push the changes to main branch:
-
-```sh
-git add -A && git commit -m "init flux" && git push
-```
-
-And run the bootstrap for `clusters/my-cluster`:
-
-```sh
-flux bootstrap git \
-  --url=ssh://git@<host>/<org>/<repository> \
-  --branch=main \
-  --path=clusters/my-cluster
-```
-
-To make further amendments, pull the changes locally,
-edit the `kustomization.yaml` file, push the changes upstream
-and rerun bootstrap or let Flux upgrade itself.
-
-Checkout the [bootstrap cheatsheet](../cheatsheets/bootstrap) for various examples of how to customize Flux.
 
 ## Dev install
 
