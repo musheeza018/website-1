@@ -100,6 +100,33 @@ Using the `flux bootstrap` command you can install Flux on a
 Kubernetes cluster and configure it to manage itself from a Git
 repository.
 
+### Example to use bootstrap Git with private SSH
+
+Generate an SSH key pair: In the command prompt you will have to generate an SSH key pair:
+`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+
+Provide a file path to save the key pair when prompted.
+
+Add the public key to your Git provider:
+
+You have to copy the contents of the public key file which is located at `~/.ssh/id_rsa.pub`.
+
+Go to your Git provider's website and navigate to your account settings. You will find the SSH key settings and add a new SSH key. 
+Copy the public key into the field and save settings.
+
+Configure SSH agent:
+
+Start the SSH agent by running the command: 
+`eval "$(ssh-agent -s)"`
+
+Add your private key to the SSH agent: 
+`ssh-add ~/.ssh/id_rsa` (replace id_rsa with your private key file name if different).
+
+Clone the Bootstrap repository:
+
+Navigate to the directory where you want to clone the repository.
+`git clone git@github.com:twbs/bootstrap.git`
+
 If the Flux components are present on the cluster, the bootstrap
 command will perform an upgrade if needed. The bootstrap is
 idempotent, it's safe to run the command as many times as you want.
