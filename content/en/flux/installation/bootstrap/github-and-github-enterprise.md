@@ -1,7 +1,7 @@
 ---
 title: GitHub and GitHub Enterprise
 linkTitle: GitHub and GitHub Enterprise
-description: "How to bootstrap Flux with GitHub"
+description: "How to bootstrap Flux with GitHub and GitHub Enterprise"
 weight: 20
 ---
 ### GitHub and GitHub Enterprise
