@@ -1,7 +1,7 @@
 ---
-title: BitBucket
-linkTitle: BitBucket
-description: "How to follow bootstrap procedure for Flux using BitBucket"
+title: BitBucket Server and Data Center
+linkTitle: BitBucket Server and Data Center
+description: "How to bootstrap Flux with BitBucket"
 weight: 40
 ---
 
