@@ -1,7 +1,7 @@
 ---
 title: Multi-tenancy lockdown
 linkTitle: Multi-tenancy lockdown
-description: "How to configure Multi-tenancy lockdown in Flux"
+description: "How to bootstrap Flux with Multi-tenancy lockdown"
 weight: 40
 ---
 
