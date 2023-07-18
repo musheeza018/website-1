@@ -116,7 +116,7 @@ follow the specific bootstrap procedure:
 * [AWS CodeCommit](./bootstrap/aws-codecommit.md#flux-installation-for-aws-codecommit)
 * [Azure DevOps](./bootstrap/azure.md#flux-installation-for-azure-devops)
 * [Bitbucket Server and Data Center](./bootstrap/bitbucket.md#bitbucket-server-and-data-center)
-* [GitHub.com and GitHub Enterprise](./bootstrap/github.md#github-and-github-enterprise)
+* [GitHub.com and GitHub Enterprise](./bootstrap/github-and-github-enterprise)
 * [GitLab.com and GitLab Enterprise](./bootstrap/gitlab.md#gitlab-and-gitlab-enterprise)
 
 ## Bootstrap with Terraform
