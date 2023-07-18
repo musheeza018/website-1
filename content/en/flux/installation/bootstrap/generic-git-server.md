@@ -1,7 +1,7 @@
 ---
 title: Generic Git Server
 linkTitle: Generic Git server
-description: "How to follow bootstrap procedure for Flux using Generic Git Server"
+description: "How to bootstrap Flux with Generic Git Server"
 weight: 20
 ---
 ### Generic Git Server
