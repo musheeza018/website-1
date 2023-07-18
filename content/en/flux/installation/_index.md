@@ -4,8 +4,9 @@ description: "Flux install, bootstrap, upgrade and uninstall documentation."
 weight: 30
 ---
 
-This guide walks you through setting up Flux to
-manage one or more Kubernetes clusters.
+Flux is an architectural pattern designed for building user interfaces, specifically in the context of web applications. It was initially introduced by Facebook as a means to manage state in complex and data-driven applications. Flux emphasizes a unidirectional flow of data, providing a clear structure to handle application state and data flow.
+
+Flux consists of several distinct components that work together to create a smooth and manageable data flow within an application.
 
 ## Prerequisites
 
@@ -93,7 +94,7 @@ A container image with `kubectl` and `flux` is available on DockerHub and GitHub
 * `docker.io/fluxcd/flux-cli:<version>`
 * `ghcr.io/fluxcd/flux-cli:<version>`
 
-## Bootstrap
+## Bootstrap with Flux CLI
 
 Using the `flux bootstrap` command you can install Flux on a
 Kubernetes cluster and configure it to manage itself from a Git
@@ -111,6 +112,7 @@ architectures.
 If your Git provider is **AWS CodeCommit**, **Azure DevOps**, **Bitbucket Server**, **GitHub** or **GitLab** please
 follow the specific bootstrap procedure:
 
+* [Generic Git Server](./bootstrap/generic-git-server.md)
 * [AWS CodeCommit](./bootstrap/aws-codecommit.md#flux-installation-for-aws-codecommit)
 * [Azure DevOps](./bootstrap/azure.md#flux-installation-for-azure-devops)
 * [Bitbucket Server and Data Center](./bootstrap/bitbucket.md#bitbucket-server-and-data-center)
@@ -204,59 +206,6 @@ edit the `kustomization.yaml` file, push the changes upstream
 and rerun bootstrap or let Flux upgrade itself.
 
 Checkout the [bootstrap cheatsheet](../cheatsheets/bootstrap) for various examples of how to customize Flux.
-
-### Multi-tenancy lockdown
-
-Assuming you want to lock down Flux on multi-tenant clusters,
-add the following patches to `clusters/my-cluster/flux-system/kustomization.yaml`:
-
-```yaml
-apiVersion: kustomize.config.k8s.io/v1
-kind: Kustomization
-resources:
-  - gotk-components.yaml
-  - gotk-sync.yaml
-patches:
-  - patch: |
-      - op: add
-        path: /spec/template/spec/containers/0/args/0
-        value: --no-cross-namespace-refs=true
-    target:
-      kind: Deployment
-      name: "(kustomize-controller|helm-controller|notification-controller|image-reflector-controller|image-automation-controller)"
-  - patch: |
-      - op: add
-        path: /spec/template/spec/containers/0/args/-
-        value: --no-remote-bases=true
-    target:
-      kind: Deployment
-      name: "kustomize-controller"
-  - patch: |
-      - op: add
-        path: /spec/template/spec/containers/0/args/0
-        value: --default-service-account=default
-    target:
-      kind: Deployment
-      name: "(kustomize-controller|helm-controller)"
-  - patch: |
-      - op: add
-        path: /spec/serviceAccountName
-        value: kustomize-controller
-    target:
-      kind: Kustomization
-      name: "flux-system"
-```
-
-With the above configuration, Flux will:
-
-- Deny cross-namespace access to Flux custom resources, thus ensuring that a tenant can't use another tenant's sources or subscribe to their events.
-- Deny accesses to Kustomize remote bases, thus ensuring all resources refer to local files, meaning only the Flux Sources can affect the cluster-state.
-- All `Kustomizations` and `HelmReleases` which don't have `spec.serviceAccountName` specified, will use the `default` account from the tenant's namespace.
-  Tenants have to specify a service account in their Flux resources to be able to deploy workloads in their namespaces as the `default` account has no permissions.
-- The flux-system `Kustomization` is set to reconcile under a service account with cluster-admin role,
-  allowing platform admins to configure cluster-wide resources and provision the tenant's namespaces, service accounts and RBAC.
-
-To apply these patches, push the changes to the main branch and run `flux bootstrap`.
 
 ## Dev install
 
