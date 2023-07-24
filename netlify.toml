@@ -26,4 +26,7 @@
   from = "/flux/cheatsheets/bootstrap/#iam-roles-for-service-accounts"
   to = "/flux/installation/configuration/iam-roles-for-service-accounts"
   status = 301
-  force = false
+  force = true
+[[redirects]]
+  from = "/flux/cheatsheets/bootstrap/#iam-roles-for-service-accounts"
+  to = "/flux/installation/configuration/iam-roles-for-service-accounts"
