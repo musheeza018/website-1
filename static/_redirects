@@ -32,7 +32,8 @@
 
 /flux/installation/#bootstrap                                         /flux/installation/bootstrap/:splat                             302
 
-/flux/installation/#bitbucket-server-and-data-center                  /flux/installation/bootstrap/bitbucket-server-and-data-center   301!            
+/flux/installation/#bitbucket-server-and-data-center                  /flux/installation/bootstrap/bitbucket-server-and-data-center   302 
+
 /flux/installation/#generic-git-server                                /flux/installation/bootstrap/generic-git-server                 301!
 /flux/installation/#github-and-github-enterprise                      /flux/installation/bootstrap/github-and-github-enterprise       301!
 /flux/installation/#gitlab-and-gitlab-enterprise                      /flux/installation/bootstrap/gitlab-and-gitlab-enterprise       301!
