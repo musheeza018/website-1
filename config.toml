@@ -1,1 +1,17 @@
+mediaTypes:
+  text/netlify:
+    delimiter: ""
+    suffixes: [""]
 
+outputFormats:
+  REDIR:
+    mediatype: "text/netlify"
+    baseName: "_redirects"
+    isPlainText: true
+    notAlternative: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - REDIR
