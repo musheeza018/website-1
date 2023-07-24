@@ -30,7 +30,7 @@
 /flagger/usage/kuma-progressive-delivery        /flagger/tutorials/kuma-progressive-delivery        301!
 /flagger/usage/gatewayapi-progressive-delivery  /flagger/tutorials/gatewayapi-progressive-delivery  301!
 
-/flux/installation/#bootstrap                                         /flux/installation/bootstrap                                    301
+/flux/installation/#bootstrap                                         /flux/installation/bootstrap/:splat                             301
 
 /flux/installation/#bitbucket-server-and-data-center                  /flux/installation/bootstrap/bitbucket-server-and-data-center   301!            
 /flux/installation/#generic-git-server                                /flux/installation/bootstrap/generic-git-server                 301!
